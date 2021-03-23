@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                xmlns:app="http://schemas.android.com/apk/res-auto"
+                android:background="@android:color/white"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+
+    <RelativeLayout
+            android:id="@+id/relative_input"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_alignParentBottom="true"
+            android:gravity="bottom"
+            android:paddingBottom="9dp"
+            android:paddingEnd="8dp"
+            android:paddingStart="8dp"
+            android:paddingTop="8dp">
+
+        <ImageView
+                android:visibility="invisible"
+                android:id="@+id/send"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:paddingTop="4dp"
+                android:paddingRight="4dp"
+                android:scaleType="centerInside"
+                android:paddingBottom="4dp"
+                app:srcCompat="@drawable/send" android:layout_alignParentRight="true"/>
+
+        <ImageView
+                android:id="@+id/microphone"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:visibility="invisible"
+                android:padding="4dp"
+                android:scaleType="centerInside"
+                android:layout_toLeftOf="@+id/send"
+                app:srcCompat="@drawable/micro" />
+
+        <EditText
+                android:id="@+id/edittext"
+                android:visibility="invisible"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_alignParentStart="true"
+                android:imeOptions="actionSend"
+                android:inputType="text"
+                android:textColor="@color/colorWhite"
+                android:background="@drawable/chat_bg"
+                android:layout_toLeftOf="@id/microphone"
+                android:padding="10dp"
+                android:textSize="18sp" android:layout_alignParentLeft="true"/>
+
+    </RelativeLayout>
+
+    <ScrollView
+            android:id="@+id/scroll_chat"
+            android:layout_marginTop="8dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_above="@+id/relative_input">
+
+        <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+                      android:orientation="horizontal"
+
+        >
+            <ImageView android:layout_width="@dimen/chatbotImageSize" android:layout_height="@dimen/chatbotImageSize"
+                       android:layout_marginStart="8dp"
+                       android:layout_marginLeft="8dp"
+                       android:src="@drawable/chatbotimage"
+            />
+
+            <LinearLayout
+                    android:id="@+id/linear_chat"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+            </LinearLayout>
+        </LinearLayout>
+
+
+
+
+    </ScrollView>
+
+</RelativeLayout>

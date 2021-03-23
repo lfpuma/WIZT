@@ -1,0 +1,257 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+             xmlns:tools="http://schemas.android.com/tools"
+             xmlns:app="http://schemas.android.com/apk/res-auto"
+             android:layout_width="match_parent"
+             android:layout_height="match_parent"
+             android:background="@color/colorPageBG"
+             tools:context=".fragments.ProfileFragment">
+
+    <android.support.constraint.ConstraintLayout
+            android:background="#31077B"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+        <include
+                android:id="@+id/include"
+                layout="@layout/app_bar"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintStart_toStartOf="parent"/>
+
+        <ScrollView android:layout_width="match_parent" android:layout_height="0dp"
+            android:scrollbars="none"
+            app:layout_constraintTop_toBottomOf="@id/include"
+            app:layout_constraintBottom_toBottomOf="parent">
+
+        <LinearLayout
+                    android:id="@+id/ll"
+                    android:orientation="vertical"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:background="@color/colorPageBG"
+                    app:layout_constraintTop_toBottomOf="@id/include"
+                    app:layout_constraintBottom_toBottomOf="parent">
+
+                <de.hdodenhof.circleimageview.CircleImageView
+                        android:id="@+id/profileImage"
+                        android:layout_width="120dp"
+                        android:layout_height="120dp"
+                        android:layout_marginTop="30dp"
+                        android:src="@drawable/ic_default_avatar"
+                        android:layout_gravity="center_horizontal"
+                        app:civ_border_width="0dp"
+                        app:civ_border_color="#ffffff"/>
+
+                <TextView
+                        android:id="@+id/nameTV"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:textAlignment="center"
+                        android:textColor="#ffffff"
+                        android:fontFamily="@font/futuraptdemi"
+                        android:textSize="25dp"/>
+                <TextView
+                        android:id="@+id/memberDate"
+                        android:layout_marginTop="5dp"
+                        android:textAlignment="center"
+                        android:textColor="#ffffff"
+                        android:fontFamily="@font/futuraptdemi"
+                        android:textSize="15dp"
+                        android:visibility="gone"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"/>
+
+                <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+                              android:gravity="center"
+                              android:orientation="horizontal">
+
+                    <Button
+                            android:id="@+id/buyBtn"
+                            android:layout_width="150dp"
+                            android:layout_height="50dp"
+                            android:layout_marginRight="5dp"
+                            android:layout_gravity="center"
+                            android:layout_marginTop="15dp"
+                            android:layout_marginBottom="15dp"
+                            android:text="@string/buy_label"
+                            android:textSize="20sp"
+                            style="@style/DefaultButton"/>
+
+                    <Button
+                            android:id="@+id/cancelPayment"
+                            android:layout_width="150dp"
+                            android:layout_height="50dp"
+                            android:visibility="gone"
+                            android:layout_marginLeft="5dp"
+                            android:layout_gravity="center"
+                            android:layout_marginTop="15dp"
+                            android:layout_marginBottom="15dp"
+                            android:text="@string/cancel_plan"
+                            android:textSize="20sp"
+                            style="@style/DefaultButton"/>
+
+                </LinearLayout>
+
+
+
+                <LinearLayout
+                        android:orientation="horizontal"
+                        android:layout_width="match_parent"
+                        android:layout_height="90dp"
+                        android:layout_marginTop="15dp"
+                        android:layout_marginLeft="30dp"
+                        android:layout_marginRight="30dp"
+                        android:paddingTop="5dp"
+                        android:paddingBottom="5dp"
+                        android:background="@drawable/home_row_default"
+                        android:weightSum="3">
+                    <LinearLayout
+                            android:orientation="vertical"
+                            android:layout_width="match_parent"
+                            android:layout_height="90dp"
+                            android:gravity="center"
+                            android:layout_weight="1">
+                        <TextView
+                                android:id="@+id/labelTV"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:fontFamily="@font/futuraptdemi"
+                                android:textColor="@color/colorWhite"
+                                android:textSize="25dp"/>
+                        <TextView
+                                android:layout_marginTop="5dp"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:fontFamily="@font/futuraptbook"
+                                android:textColor="#7100C3"
+                                android:textSize="14dp"
+                                android:text="@string/image_used"/>
+                    </LinearLayout>
+                    <TextView
+                            android:layout_marginTop="10dp"
+                            android:layout_marginBottom="10dp"
+                            android:background="#7100C3"
+                            android:layout_width="1dp"
+                            android:layout_height="match_parent"/>
+
+                    <LinearLayout
+                            android:orientation="vertical"
+                            android:layout_width="match_parent"
+                            android:layout_height="90dp"
+                            android:gravity="center"
+                            android:layout_weight="1">
+                        <TextView
+                                android:id="@+id/yourLabelTV"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:fontFamily="@font/futuraptdemi"
+                                android:textColor="@color/colorWhite"
+                                android:textSize="25dp"/>
+                        <TextView
+                                android:layout_marginTop="5dp"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:fontFamily="@font/futuraptbook"
+                                android:textColor="#7100C3"
+                                android:textSize="14dp"
+                                android:text="@string/availableimages"/>
+                    </LinearLayout>
+
+                    <TextView
+                            android:layout_marginTop="10dp"
+                            android:layout_marginBottom="10dp"
+                            android:background="#7100C3"
+                            android:layout_width="1dp"
+                            android:layout_height="match_parent"/>
+
+                    <LinearLayout
+                            android:orientation="vertical"
+                            android:layout_width="match_parent"
+                            android:layout_height="90dp"
+                            android:gravity="center"
+                            android:layout_weight="1">
+                        <TextView
+                                android:id="@+id/friendsTV"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:fontFamily="@font/futuraptdemi"
+                                android:textColor="@color/colorWhite"
+                                android:textSize="25dp"/>
+                        <TextView
+                                android:layout_marginTop="5dp"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:fontFamily="@font/futuraptbook"
+                                android:textColor="#7100C3"
+                                android:textSize="14dp"
+                                android:text="@string/your_friends"/>
+                    </LinearLayout>
+                </LinearLayout>
+
+                <LinearLayout
+                        android:orientation="vertical"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="20dp"
+                        android:layout_marginRight="30dp"
+                        android:layout_marginLeft="30dp">
+                    <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/futuraptbook"
+                            android:textSize="16dp"
+                            android:textColor="#7100C3"
+                            android:textStyle="bold"
+                            android:text="@string/email"/>
+                    <TextView
+                            android:id="@+id/emailTV"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            style="@style/DefaultDarkTextView"/>
+                </LinearLayout>
+
+                <LinearLayout
+                        android:orientation="vertical"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="20dp"
+                        android:layout_marginRight="30dp"
+                        android:layout_marginLeft="30dp">
+                    <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/futuraptbook"
+                            android:textSize="16dp"
+                            android:textColor="#7100C3"
+                            android:textStyle="bold"
+                            android:text="@string/phone"/>
+                    <TextView
+                            android:id="@+id/phoneTV"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            style="@style/DefaultDarkTextView"/>
+                </LinearLayout>
+
+                <TextView
+                        android:id="@+id/logoutBtn"
+                        android:layout_width="match_parent"
+                        android:layout_height="60dp"
+                        android:layout_marginTop="20dp"
+                        android:layout_marginLeft="30dp"
+                        android:layout_marginRight="30dp"
+                        android:layout_marginBottom="20dp"
+                        android:layout_gravity="center"
+                        android:textColor="@color/colorWhite"
+                        android:fontFamily="@font/futuraptmedium"
+                        android:textSize="25sp"
+                        android:text="@string/logout"
+                        style="@style/DefaultButton"/>
+        </LinearLayout>
+
+        </ScrollView>
+
+
+
+    </android.support.constraint.ConstraintLayout>
+</FrameLayout>

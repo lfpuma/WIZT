@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout
+        xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:layout_margin="5dp"
+        android:background="@drawable/home_row_default"
+        android:layout_width="match_parent"
+        android:layout_height="80dp">
+
+    <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/userAvatar"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintDimensionRatio="1:1"
+            app:layout_constraintLeft_toLeftOf="parent"
+            android:src="@drawable/ic_default_avatar"
+            android:layout_gravity="center_horizontal"
+            app:civ_border_width="0dp"
+            android:layout_margin="12dp"
+            app:civ_border_color="#ffffff"/>
+
+    <LinearLayout
+            android:id="@+id/ll1"
+            android:orientation="vertical"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintLeft_toRightOf="@id/userAvatar"
+            app:layout_constraintRight_toLeftOf="@id/ll2">
+        <TextView
+                android:id="@+id/userNameTV"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Sofiya A"
+                android:fontFamily="@font/futuraptmedium"
+                android:textSize="18dp"
+                android:layout_marginBottom="3dp"
+                android:layout_marginLeft="20dp"
+                android:textColor="#ffffff"/>
+    </LinearLayout>
+
+    <android.support.constraint.ConstraintLayout
+            android:id="@+id/ll2"
+            android:orientation="horizontal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="10dp"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintRight_toRightOf="parent">
+
+        <ImageView
+                android:id="@+id/shareBtn"
+                android:src="@drawable/btn_share_arc"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:layout_width="50dp"
+                android:layout_height="50dp"/>
+
+    </android.support.constraint.ConstraintLayout>
+
+
+</android.support.constraint.ConstraintLayout>

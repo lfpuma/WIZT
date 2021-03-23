@@ -1,0 +1,568 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/colorPrimary"
+        tools:context=".activities.CreateLabelActivity">
+
+    <ScrollView
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toTopOf="@id/bottomCL"
+            android:scrollbars="none"
+            android:layout_width="match_parent"
+            android:layout_height="0dp">
+
+        <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+            <android.support.constraint.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                <android.support.constraint.ConstraintLayout
+                        android:id="@+id/cl"
+                        android:layout_width="match_parent"
+                        android:layout_height="70dp"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent">
+
+                    <ImageView
+                            android:id="@+id/closeBtn"
+                            android:layout_width="@dimen/backbuttoniconsize"
+                            android:layout_height="@dimen/backbuttoniconsize"
+                            android:tint="@color/colorWhite"
+                            android:layout_marginStart="10dp"
+                            app:layout_constraintTop_toTopOf="parent"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            android:src="@drawable/ic_swipe"/>
+
+                    <TextView
+                            android:id="@+id/titleTV"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="20dp"
+                            app:layout_constraintStart_toEndOf="@id/closeBtn"
+                            app:layout_constraintTop_toTopOf="parent"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            style="@style/PageTitle"
+                            android:textSize="22sp"
+                            android:text="@string/create_new_label"/>
+
+                    <ImageButton
+                            android:visibility="gone"
+                            android:id="@+id/saveBtn"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:padding="16dp"
+                            android:scaleX="0.4"
+                            android:scaleY="0.4"
+                            android:background="@color/colorTransparency"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintDimensionRatio="8:10"
+                            android:src="@drawable/ic_save"/>
+
+                </android.support.constraint.ConstraintLayout>
+
+                <ImageView
+                        android:id="@+id/imageARMarker"
+                        android:layout_width="@dimen/locationimage_width"
+                        android:layout_height="@dimen/locationimage_height"
+                        android:elevation="2dp"
+                        android:scaleType="fitXY"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@id/cl"
+                        android:layout_marginStart="20dp"
+                        android:layout_marginTop="20dp"/>
+
+                <ImageView
+                        android:id="@+id/imageARMarker_btn"
+                        android:layout_width="@dimen/locationimage_width"
+                        android:layout_height="@dimen/locationimage_height"
+                        android:elevation="1dp"
+                        app:layout_constraintStart_toStartOf="@id/imageARMarker"
+                        app:layout_constraintTop_toTopOf="@id/imageARMarker"
+                        app:layout_constraintBottom_toBottomOf="@id/imageARMarker"
+                        app:layout_constraintEnd_toEndOf="@id/imageARMarker"
+                        android:src="@drawable/ic_location_template"/>
+
+                <LinearLayout
+                        android:id="@+id/locationLL"
+                        android:orientation="horizontal"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="20dp"
+                        android:layout_marginEnd="20dp"
+                        app:layout_constraintStart_toEndOf="@id/imageARMarker"
+                        app:layout_constraintTop_toTopOf="@id/imageARMarker"
+                        app:layout_constraintBottom_toBottomOf="@id/imageARMarker"
+                        app:layout_constraintEnd_toEndOf="parent" android:visibility="gone">
+                    <ImageView
+                            android:layout_width="22dp"
+                            android:layout_height="22dp"
+                            android:layout_gravity="center"
+                            android:tint="@color/colorWhite"
+                            android:src="@drawable/ic_location"/>
+                    <TextView
+                            android:id="@+id/locationTV"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="10dp"
+                            android:layout_gravity="center"
+                            android:text=""
+                            android:gravity="center_vertical"
+                            android:hint="@string/select_location"
+                            android:textColorHint="@color/colorWhite"
+                            android:textSize="18sp"
+                            android:textColor="@color/colorWhite"
+                            android:fontFamily="@font/futuraptmedium"/>
+                </LinearLayout>
+
+                <ImageView
+                        android:id="@+id/cameraBtn"
+                        android:layout_width="@dimen/snapcontentwidth"
+                        android:layout_height="@dimen/snapcontentheight"
+                        android:layout_marginStart="20dp"
+                        android:layout_marginTop="20dp"
+                        android:padding="10dp"
+                        android:elevation="2dp"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@id/imageARMarker"
+                        android:background="@drawable/ic_snapcontent_back"
+                        android:src="@drawable/ic_snapcontent"/>
+
+                <android.support.v7.widget.RecyclerView
+                        android:id="@+id/imageRecyclerView"
+                        android:layout_width="0dp"
+                        android:layout_height="0dp"
+                        android:elevation="1dp"
+                        app:layout_constraintStart_toStartOf="@id/cameraBtn"
+                        app:layout_constraintTop_toTopOf="@id/cameraBtn"
+                        app:layout_constraintBottom_toBottomOf="@id/cameraBtn"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        android:orientation="horizontal"
+                        app:layoutManager="android.support.v7.widget.LinearLayoutManager">
+                </android.support.v7.widget.RecyclerView>
+
+                <ImageView
+                        android:id="@+id/cameraBtn_addmore"
+                        android:layout_width="200dp"
+                        android:layout_height="50dp"
+                        android:layout_marginStart="20dp"
+                        android:layout_marginTop="10dp"
+                        android:padding="10dp"
+                        android:elevation="2dp"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@id/cameraBtn"
+                        android:src="@drawable/addmorephontos"
+                        android:contentDescription="@string/add_more_contents"
+                        />
+
+                <LinearLayout
+                        android:id="@+id/typeNotesLL"
+                        android:orientation="horizontal"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@id/cameraBtn_addmore"
+                        android:layout_marginStart="24dp"
+                        android:layout_marginTop="20dp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content">
+
+                    <ImageView
+                            android:src="@drawable/ic_notes"
+                            android:layout_gravity="center"
+                            android:tint="@color/colorWhite"
+                            android:layout_width="@dimen/iconnotessize"
+                            android:layout_height="@dimen/iconnotessize"/>
+
+
+                    <EditText
+                            android:id="@+id/labelNameTV"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:textColor="@color/colorWhite"
+                            android:layout_marginStart="18dp"
+                            android:background="@color/colorTransparency"
+                            android:hint="Type notes"
+                            android:inputType="text"
+                            android:fontFamily="@font/futuraptmedium"
+                            android:textColorHint="@color/colorWhite"/>
+
+                </LinearLayout>
+
+                <LinearLayout
+                        android:id="@+id/alarmLL"
+                        android:orientation="horizontal"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="12dp"
+                        android:layout_marginEnd="20dp"
+                        app:layout_constraintTop_toTopOf="@id/enterTagLL"
+                        app:layout_constraintEnd_toEndOf="parent">
+
+                    <ImageView
+                            android:layout_width="24dp"
+                            android:layout_height="24dp"
+                            android:tint="@color/colorWhite"
+                            android:src="@drawable/ic_alarm"/>
+                    <TextView
+                            android:id="@+id/alarmTV"
+                            android:layout_width="110dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="10dp"
+                            android:layout_gravity="center"
+                            android:text=""
+                            android:hint="Set reminder"
+                            android:textColorHint="@color/colorWhite"
+                            android:textSize="18sp"
+                            android:textColor="@color/colorWhite"
+                            android:fontFamily="@font/futuraptmedium"/>
+                </LinearLayout>
+
+                <LinearLayout
+                        android:id="@+id/enterTagLL"
+                        app:layout_constraintTop_toBottomOf="@id/typeNotesLL"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintEnd_toStartOf="@id/alarmLL"
+                        android:layout_marginTop="30dp"
+                        android:layout_marginStart="13dp"
+                        android:orientation="horizontal"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:gravity="center_vertical" android:layout_marginEnd="10dp">
+                    <ImageView
+                            android:layout_width="@dimen/tagiconsize"
+                            android:layout_height="@dimen/tagiconsize"
+                            android:src="@drawable/btn_newlabel_arc"/>
+                    <EditText
+                            android:id="@+id/tagET"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="7dp"
+                            android:hint="Enter tags"
+                            android:textColorHint="@color/colorWhite"
+                            android:textCursorDrawable="@drawable/edit_cursor"
+                            android:textColor="@color/colorWhite"
+                            android:lines="1"
+                            android:inputType="text"
+                            android:fontFamily="@font/futuraptmedium"
+                            android:background="@color/colorTransparency"/>
+                </LinearLayout>
+
+                <co.lujun.androidtagview.TagContainerLayout
+                        android:id="@+id/tagContainer"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:padding="10dp"
+                        android:layout_marginTop="10dp"
+                        app:layout_constraintStart_toStartOf="@id/enterTagLL"
+                        app:layout_constraintEnd_toEndOf="@id/enterTagLL"
+                        app:layout_constraintTop_toBottomOf="@id/enterTagLL"
+                        app:container_enable_drag="true"
+                        app:container_background_color = "#00ffffff"
+                        app:container_border_color = "#00ffffff"
+                        app:tag_background_color="@color/colorTagBG"
+                        app:tag_border_color="@color/colorTagBG"
+                        app:tag_text_color="#ffffffff"
+                        app:tag_text_size = "14sp"
+                        app:tag_vertical_padding = "5dp"
+                        app:horizontal_interval="10dp"
+                        app:vertical_interval="10dp"
+                        app:tag_enable_cross="true"
+                        app:tag_cross_area_padding="8dp"
+                        app:tag_cross_color = "#ffffff"
+                        app:tag_theme="none"/>
+
+            </android.support.constraint.ConstraintLayout>
+
+        </LinearLayout>
+
+    </ScrollView>
+
+    <android.support.design.widget.FloatingActionButton
+            android:id="@+id/fab_done"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            android:elevation="10dp"
+            app:borderWidth="0dp"
+            android:scaleType="center"
+            android:backgroundTint="@color/colorText1"
+            android:layout_marginBottom="@dimen/marginBottom_fabAdd"
+            android:layout_marginEnd="@dimen/marginEnd_fabAdd"/>
+
+    <ImageView android:layout_width="30dp"
+               android:layout_height="30dp"
+               android:src="@drawable/ic_check_new"
+               android:elevation="11dp"
+               app:layout_constraintTop_toTopOf="@id/fab_done"
+               app:layout_constraintStart_toStartOf="@id/fab_done"
+               app:layout_constraintEnd_toEndOf="@id/fab_done"
+               app:layout_constraintBottom_toBottomOf="@id/fab_done"
+    />
+
+    <android.support.constraint.ConstraintLayout
+            android:id="@+id/bottomCL"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            android:layout_width="match_parent"
+            android:background="@color/color_newlabelbottom"
+            android:paddingStart="20dp"
+            android:paddingEnd="20dp"
+            android:paddingBottom="10dp"
+            android:layout_height="@dimen/bottomclHeight">
+
+        <LinearLayout
+                android:id="@+id/bottomBtn_location"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                android:orientation="vertical"
+                android:gravity="center"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+            <ImageView
+                    android:src="@drawable/ic_location"
+                    android:layout_width="@dimen/iconsize_newlabelbottom"
+                    android:layout_height="@dimen/iconsize_newlabelbottom"/>
+
+            <TextView
+                    android:text="LOCATION"
+                    android:layout_marginTop="@dimen/margintop_newlabelbottom"
+                    android:textSize="@dimen/textsize_newlabelbottom"
+                    android:textStyle="bold"
+                    android:textColor="@color/colorWhite"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+                android:id="@+id/bottomBtn_content"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toEndOf="@id/bottomBtn_location"
+                app:layout_constraintEnd_toStartOf="@id/bottomBtn_tags"
+                android:orientation="vertical"
+                android:gravity="center"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+            <ImageView
+                    android:src="@drawable/ic_content"
+                    android:layout_width="@dimen/iconsize_newlabelbottom"
+                    android:layout_height="@dimen/iconsize_newlabelbottom"/>
+
+            <TextView
+                    android:text="CONTENT"
+                    android:layout_marginTop="@dimen/margintop_newlabelbottom"
+                    android:textSize="@dimen/textsize_newlabelbottom"
+                    android:textStyle="bold"
+                    android:textColor="@color/colorWhite"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+                android:id="@+id/bottomBtn_tags"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toEndOf="@id/bottomBtn_content"
+                app:layout_constraintEnd_toStartOf="@id/bottomBtn_reminder"
+                android:orientation="vertical"
+                android:gravity="center"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+            <ImageView
+                    android:src="@drawable/ic_tags_new"
+                    android:layout_width="@dimen/iconsize_newlabelbottom"
+                    android:layout_height="@dimen/iconsize_newlabelbottom"/>
+
+            <TextView
+                    android:text="TAGS"
+                    android:layout_marginTop="@dimen/margintop_newlabelbottom"
+                    android:textSize="@dimen/textsize_newlabelbottom"
+                    android:textStyle="bold"
+                    android:textColor="@color/colorWhite"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+                android:id="@+id/bottomBtn_reminder"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:orientation="vertical"
+                android:gravity="center"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+            <ImageView
+                    android:src="@drawable/ic_alarm"
+                    android:layout_width="@dimen/iconsize_newlabelbottom"
+                    android:layout_height="@dimen/iconsize_newlabelbottom"/>
+
+            <TextView
+                    android:text="REMINDER"
+                    android:layout_marginTop="@dimen/margintop_newlabelbottom"
+                    android:textSize="@dimen/textsize_newlabelbottom"
+                    android:textStyle="bold"
+                    android:textColor="@color/colorWhite"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"/>
+
+        </LinearLayout>
+
+    </android.support.constraint.ConstraintLayout>
+
+    <TextView
+            android:text="Quick access"
+            android:textColor="@color/colorWhite"
+            android:background="@drawable/ic_qc_back"
+            android:paddingTop="4dp"
+            android:paddingBottom="4dp"
+            android:paddingStart="30dp"
+            android:paddingEnd="30dp"
+            android:layout_marginBottom="57dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
+
+    <ScrollView android:layout_width="0dp" android:layout_height="0dp"
+                android:visibility="gone"
+                android:scrollbars="none"
+                android:layout_marginTop="10dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent">
+
+        <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingLeft="20dp"
+                android:paddingRight="20dp">
+
+            <android.support.constraint.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="150dp"
+                    android:layout_marginBottom="20dp">
+
+                <Button
+                        android:visibility="gone"
+                        android:id="@+id/setMarkerBtn"
+                        android:layout_width="0dp"
+                        android:layout_height="42dp"
+                        android:background="@drawable/btn_set_ar_marker"
+                        android:layout_marginStart="10dp"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent" android:layout_marginEnd="10dp"/>
+
+                <TextView
+                        android:visibility="gone"
+                        android:id="@+id/image_Marker"
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"
+                        android:background="@drawable/setarmarkericon"
+                        app:layout_constraintEnd_toStartOf="@id/tv_Marker"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintBottom_toBottomOf="@id/setMarkerBtn" android:layout_marginEnd="8dp"
+                        android:layout_marginBottom="5dp"/>
+
+                <TextView
+                        android:visibility="gone"
+                        android:id="@+id/tv_Marker"
+                        android:layout_width="wrap_content"
+                        android:layout_height="0dp"
+                        android:text="@string/set_ar_marker"
+                        android:textAlignment="center"
+                        android:textSize="16sp"
+                        android:textColor="@color/colorWhite"
+                        android:fontFamily="@font/futuraptmedium"
+                        android:gravity="center"
+                        app:layout_constraintStart_toStartOf="@id/setMarkerBtn"
+                        app:layout_constraintEnd_toEndOf="@id/setMarkerBtn"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintBottom_toBottomOf="@id/setMarkerBtn" android:layout_marginStart="16dp"/>
+
+            </android.support.constraint.ConstraintLayout>
+
+
+
+
+            <RelativeLayout
+                    android:visibility="gone"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp">
+
+                <RelativeLayout
+                        android:id="@+id/locationBtn"
+                        android:layout_width="160dp"
+                        android:layout_height="40dp"
+                        android:background="@drawable/button_default"
+                        android:layout_centerVertical="true"
+                        android:layout_alignParentRight="true">
+                    <LinearLayout
+                            android:id="@+id/setCurrLocationBtn"
+                            android:orientation="horizontal"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:gravity="center_vertical"
+                            android:layout_centerInParent="true">
+                        <ImageView
+                                android:layout_width="14dp"
+                                android:layout_height="14dp"
+                                android:src="@drawable/ic_location_white"/>
+                        <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:fontFamily="@font/futuraptmedium"
+                                android:textColor="@color/colorWhite"
+                                android:textSize="16sp"
+                                android:layout_marginLeft="5dp"
+                                android:text="@string/current_location"/>
+                    </LinearLayout>
+                </RelativeLayout>
+            </RelativeLayout>
+
+            <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="1px"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginBottom="20dp"
+                    android:background="@color/colorDivider"/>
+
+
+
+            <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="1px"
+                    android:layout_marginTop="25dp"
+                    android:layout_marginBottom="10dp"
+                    android:background="@color/colorDivider"/>
+
+
+
+        </LinearLayout>
+
+    </ScrollView>
+
+    <FrameLayout
+            android:id="@+id/container"
+            android:visibility="gone"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+    </FrameLayout>
+
+</android.support.constraint.ConstraintLayout>

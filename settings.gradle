@@ -1,0 +1,3 @@
+include ':app', ':blockedittext', ':hiddensearchwithrecyclerview'
+project(':blockedittext').projectDir = new File('libraries/blockedittext')
+project(':hiddensearchwithrecyclerview').projectDir = new File('libraries/hiddensearchwithrecyclerview')

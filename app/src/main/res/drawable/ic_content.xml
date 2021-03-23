@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+        android:width="20.086dp"
+        android:height="20.086dp"
+        android:viewportWidth="24.086"
+        android:viewportHeight="24.086">
+
+    <group>
+        <group>
+            <group>
+                <path
+                        android:fillColor="#FFFFFF"
+                        android:fillAlpha="0.784"
+                        android:strokeAlpha="0.784"
+                        android:strokeWidth="1"
+                        android:pathData="M1.96,9.493h6.9a0.631 0.631 ,0,0,0,0.638-0.638V1.96a0.631 0.631 ,0,0,0-0.638-0.638H1.96a0.631 0.631 ,0,0,0-0.638 0.638 v6.9A0.651 0.651 ,0,0,0,1.96,9.493ZM2.6,2.6H8.217V8.217H2.6V2.6Z" />
+                <path
+                        android:fillColor="#FFFFFF"
+                        android:fillAlpha="0.784"
+                        android:strokeAlpha="0.784"
+                        android:strokeWidth="1"
+                        android:pathData="M22.65,1.96a0.631 0.631 ,0,0,0-0.638-0.638h-6.9a0.631 0.631 ,0,0,0-0.638 0.638 v6.9a0.631 0.631 ,0,0,0,0.638 0.638 h6.9a0.631 0.631 ,0,0,0,0.638-0.638ZM21.374,8.217H15.755V2.6h5.619Z" />
+                <path
+                        android:fillColor="#FFFFFF"
+                        android:fillAlpha="0.784"
+                        android:strokeAlpha="0.784"
+                        android:strokeWidth="1"
+                        android:pathData="M1.96,22.65h6.9a0.631 0.631 ,0,0,0,0.638-0.638v-6.9a0.631 0.631 ,0,0,0-0.638-0.638H1.96a0.631 0.631 ,0,0,0-0.638 0.638 v6.9A0.651 0.651 ,0,0,0,1.96,22.65Zm0.638-6.9H8.217v5.619H2.6V15.755Z" />
+                <path
+                        android:fillColor="#FFFFFF"
+                        android:fillAlpha="0.784"
+                        android:strokeAlpha="0.784"
+                        android:strokeWidth="1"
+                        android:pathData="M22.012,14.478h-6.9a0.631 0.631 ,0,0,0-0.638 0.638 v6.9a0.631 0.631 ,0,0,0,0.638 0.638 h6.9a0.631 0.631 ,0,0,0,0.638-0.638v-6.9A0.651 0.651 ,0,0,0,22.012,14.478Zm-0.638,6.9H15.755V15.755h5.619Z" />
+            </group>
+        </group>
+    </group>
+</vector>

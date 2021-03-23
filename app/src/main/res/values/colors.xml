@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#340589</color>
+    <color name="colorPrimarySelected">#ff340589</color>
+    <color name="colorPrimaryDark">#000000</color>
+    <color name="colorAccent">#5fbcde</color>
+    <color name="colorPageBG">#340589</color>
+    <color name="colorAppBar">#31077B</color>
+    <color name="colorTagBG">#7100C3</color>
+    <color name="colorBottomMenu">#1E0247</color>
+    <color name="colorSetCoverImageBg">#dd1E0247</color>
+
+    <color name="colorWhite">#ffffff</color>
+    <color name="colorTextDefault">#373946</color>
+    <color name="colorText1">#DC873B</color>
+    <color name="colorText2">#7100C3</color>
+    <color name="colorText3">#9c5fc1</color>
+    <color name="colorTextLabelDefault">#383842</color>
+    <color name="colorDarkGray">#383842</color>
+    <color name="colorGray">#86878c</color>
+    <color name="colorPlaceholder">#9c9da1</color>
+    <color name="colorLightBlue">#5fbcde</color>
+    <color name="colorRed">#fe3c3c</color>
+    <color name="colorDivider">#9c5fc1</color>
+    <color name="colorTransparency">#00000000</color>
+    <color name="colorSelCircle">#DC873B</color>
+
+    <color name="colorSwipeButton">#707070</color>
+
+    <color name="scrim">#42000000</color>
+    <color name="firstItemColor_nav_header">#7C14C8</color>
+    <color name="secondItemColor_nav_header">#8626CC</color>
+    <color name="colorFriendListButton_friend">#7100C3</color>
+    <color name="colorAddFriendButton_friend">#28046A</color>
+    <color name="color_newlabelbottom">#28046A</color>
+
+</resources>

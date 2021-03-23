@@ -1,0 +1,108 @@
+package com.wizt.common.constants
+
+
+object Constants {
+    /***
+     * Activity Result Codes
+     */
+    const val ACTIVITY_RESULT_CAMERA_OK = 10001
+    const val ACTIVITY_RESULT_REGISTER_OK =10002
+    const val ACTIVITY_RESULT_CHANGE_PW_OK = 10003
+    const val ACTIVITY_RESULT_AUTH_OK = 10004
+    const val ACTIVITY_RESULT_RESET_PW_OK = 10005
+    const val ACTIVITY_PROFILE_CAMERA_OK = 10006
+    const val ACTIVITY_PROFILE_GALLERY_OK = 10007
+    const val ACTIVITY_FLOOR_PLAN_ADD_OK = 10008
+    const val ACTIVITY_SET_AR_MARKER_OK = 10009
+    const val ACTIVITY_RESULT_LABEL_LOCATION_OK = 10010
+    const val ACTIVITY_RESULT_DELETE_FLOOR_PLAN_OK = 10011
+    const val ACTIVITY_SET_OBJ_RECT_OK = 10012
+
+    const val ACTIVITY_RESULT_CONFIRM_PHONENUMBER = 5
+
+
+    /****
+     * Preference Key
+     */
+    const val PREF_FIREBASE_TOKEN = "PREF_FIREBASE_TOKEN"
+    const val PREF_ENDPOINTARN = "PREF_ENDPOINTARN"
+    const val PREF_IS_FLOOR_PLAN_STATE = "PREF_IS_FLOOR_PLAN_STATE"
+    const val PREF_IS_LOGIN = "PREF_IS_LOGIN"
+    const val PREF_USER_EMAIL = "PREF_USER_EMAIL"
+    const val PREF_TUTORIAL = "PREF_TUTORIAL"
+    const val PREF_TUTORIAL_REQUIRE = "PREF_TUTORIAL_REQUIRE"
+    const val PREF_HOME_IS_FOCUS = "PREF_HOME_IS_FOCUS"
+    const val PREF_IS_CURR_LOCATION = "PREF_IS_CURR_LOCATION"
+    const val PREF_IS_FIRST_ADDRESS = "PREF_IS_FIRST_ADDRESS"
+
+    const val PREF_CURRENT_TOKEN = "PREF_CURRENT_TOKEN"
+    const val PREF_SEARCHSTRING = "PREF_SEARCHSTRING"
+    const val PREF_SEARCHSTRING_SHAREWITHME = "PREF_SEARCHSTRING_SHAREWITHME"
+    const val PREF_SEARCHSTRING_OBJECT = "PREF_SEARCHSTRING_OBJECT"
+    const val PREF_SEARCHSTRING_USERLIST = "PREF_SEARCHSTRING_USERLIST"
+
+    const val PREF_FROM_CHATBOT = "PREF_FROM_CHATBOT"
+    /***
+     * S3 Access Key
+     */
+    //const val S3_ACCESS_KEY_ID = ""
+    //const val S3_SECRET_ACCESS_KEY = ""
+
+    //const val AWS_ACCESS_KEY = ""
+    //const val AWS_SECRETKEY = ""
+    const val AWS_ACCESS_KEY = ""
+    const val AWS_SECRETKEY = ""
+    const val PLATFORMAPPLICATIONARN = ""
+    //const val BAICAUTHSTRING = ""
+
+    /***
+     * Identity pool ID
+     */
+    const val IDENTITY_POOL_ID = ""
+
+
+    /***
+     * Intent Extra Constants
+     */
+    const val EXTRA_CREATE_LABEL_ACTIVITY_TYPE = "EXTRA_CREATE_LABEL_ACTIVITY_TYPE"
+    const val EXTRA_CREATE_FYBE_ACTIVITY_TYPE = "EXTRA_CREATE_FYBE_ACTIVITY_TYPE"
+    const val EXTRA_CREATE_TRAIN_ACTIVITY_TYPE = "EXTRA_CREATE_TRAIN_ACTIVITY_TYPE"
+    const val EXTRA_CREATE_TRAIN_ACTIVITY_TITLE = "EXTRA_CREATE_TRAIN_ACTIVITY_TITLE"
+    const val EXTRA_SET_AR_MARKER = "EXTRA_SET_AR_MARKER"
+    const val EXTRA_SET_OBJ_RECT = "EXTRA_SET_OBJ_RECT"
+    const val EXTRA_SET_OBJ_RECT_COUNT = "EXTRA_SET_OBJ_RECT_COUNT"
+    const val EXTRA_AR_MARKER_URL = "EXTRA_AR_MARKER_URL"
+    const val EXTRA_AR_MARKER_NAME = "EXTRA_AR_MARKER_NAME"
+    const val EXTRA_OBJ_RECT_URL = "EXTRA_AR_MARKER_URL"
+    const val EXTRA_EDIT_LABEL_TYPE = "EXTRA_EDIT_LABEL_TYPE"
+    const val EXTRA_CAMERA_STATE = "EXTRA_CAMERA_STATE"
+    const val EXTRA_CAMERA_NAME = "EXTRA_CAMERA_NAME"
+
+    const val EXTRA_CAMERA_UPLOAD = "UPLOAD"
+    const val EXTRA_CAMERA_LOCAL = "LOCAL"
+    const val REQUIRECALL = "requirecall"
+
+    const val EXTRA_FLOORPLAN_TO_LABELS = "EXTRA_FLOORPLAN_TO_LABELS"
+    /**
+     * Address Constants
+     */
+    const val ADDRESS_NAME = "ADDRESS_NAME"
+    const val ADDRESS_MOBILE = "ADDRESS_MOBILE"
+    const val ADDRESS_SHIPPING = "ADDRESS_SHIPPING"
+    const val ADDRESS_COUNTRY = "ADDRESS_COUNTRY"
+    const val ADDRESS_STATE = "ADDRESS_STATE"
+    const val ADDRESS_ZIP_CODE = "ADDRESS_ZIP_CODE"
+
+    /**
+     * Profile Constants
+     */
+    const val PROFILE_USER_NAME = "PROFILE_USER_NAME"
+    const val PROFILE_USER_EMAIL = "PROFILE_USER_EMAIL"
+    const val PROFILE_USER_PICTURE_AVATAR = "PROFILE_USER_PICTURE_AVATAR"
+
+    // Image Crop Size & reduce Size
+
+    const val IMAGERESIZE = 800
+    const val THUMBNAILSIZE = 400
+    const val PHOTOIMAGERESIZE = 400
+}

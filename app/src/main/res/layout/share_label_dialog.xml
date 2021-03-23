@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:background="@color/colorPrimary"
+        android:layout_height="match_parent" xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <android.support.constraint.ConstraintLayout
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            android:layout_width="match_parent"
+            android:layout_height="200dp">
+
+        <TextView
+                android:id="@+id/dialogTitleTV"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintLeft_toLeftOf="parent"
+                android:layout_marginStart="20dp"
+                android:text="@string/set_permission"
+                android:textColor="@color/colorWhite"
+                android:fontFamily="@font/futuraptmedium"
+                android:textSize="24sp"
+                android:layout_marginTop="10dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+
+        <CheckBox
+                android:id="@+id/viewCB"
+                app:layout_constraintTop_toBottomOf="@+id/dialogTitleTV"
+                app:layout_constraintLeft_toLeftOf="parent"
+                android:layout_marginStart="20dp"
+                android:text="@string/view"
+                android:checked="true"
+                android:textColor="@color/colorWhite"
+                android:fontFamily="@font/futuraptmedium"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+        <CheckBox
+                android:id="@+id/editCB"
+                android:checked="false"
+                app:layout_constraintTop_toBottomOf="@+id/viewCB"
+                app:layout_constraintLeft_toLeftOf="parent"
+                android:text="@string/edit"
+                android:textColor="@color/colorWhite"
+                android:layout_marginStart="20dp"
+                android:fontFamily="@font/futuraptmedium"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+        <Button
+                app:layout_constraintTop_toBottomOf="@+id/editCB"
+                app:layout_constraintRight_toRightOf="parent"
+                android:layout_marginTop="20dp"
+                android:layout_marginEnd="20dp"
+                android:id="@+id/shareBtn"
+                style="@style/DefaultButton"
+                android:text="@string/share"
+                android:textSize="18sp"
+                android:fontFamily="@font/futuraptmedium"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+        <Button
+                android:id="@+id/closeBtn"
+                app:layout_constraintRight_toLeftOf="@+id/shareBtn"
+                app:layout_constraintTop_toBottomOf="@+id/editCB"
+                android:layout_marginEnd="20dp"
+                android:layout_marginTop="20dp"
+                style="@style/DefaultButton"
+                android:textSize="18sp"
+                android:fontFamily="@font/futuraptmedium"
+                android:text="@string/close"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+
+    </android.support.constraint.ConstraintLayout>
+
+
+</android.support.constraint.ConstraintLayout>

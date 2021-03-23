@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/colorPrimary">
+    <android.support.constraint.ConstraintLayout
+            android:id="@+id/cl"
+            android:layout_width="match_parent"
+            android:layout_height="70dp"
+            android:background="@color/colorAppBar"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+        <ImageButton
+                android:id="@+id/closeBtn"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:padding="20dp"
+                android:scaleY="0.4"
+                android:scaleX="0.4"
+                android:background="@color/colorTransparency"
+                app:layout_constraintDimensionRatio="8:10"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                android:src="@drawable/ic_arrow_left_white"/>
+        <TextView
+                android:id="@+id/titleTV"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"
+                style="@style/PageTitle"
+                android:textSize="18dp"
+                android:text="@string/set_ar_marker"/>
+
+        <ImageButton
+                android:visibility="gone"
+                android:id="@+id/saveBtn"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:padding="16dp"
+                android:scaleX="0.4"
+                android:scaleY="0.4"
+                android:background="@color/colorTransparency"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintDimensionRatio="8:10"
+                android:src="@drawable/ic_save"/>
+    </android.support.constraint.ConstraintLayout>
+
+    <android.support.constraint.ConstraintLayout
+            android:id="@+id/containerLayout"
+            app:layout_constraintTop_toBottomOf="@+id/cl"
+            app:layout_constraintBottom_toTopOf="@id/bottomCons"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            android:layout_width="match_parent"
+            android:layout_height="0dp">
+        <ImageView
+                android:id="@+id/imageView"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:scaleType="fitXY"
+                android:layout_width="0dp"
+                android:layout_height="0dp"/>
+        <ImageView
+                android:id="@+id/arImageView"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                android:src="@drawable/armarkerpin"
+                android:layout_width="80dp"
+                android:layout_height="80dp"/>
+
+
+    </android.support.constraint.ConstraintLayout>
+
+    <android.support.design.widget.FloatingActionButton
+            android:id="@+id/doneBtn"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            android:elevation="10dp"
+            app:borderWidth="0dp"
+            android:scaleType="center"
+            android:backgroundTint="@color/colorText1"
+            android:layout_marginBottom="@dimen/marginBottom_fabAdd"
+            android:layout_marginEnd="@dimen/marginEnd_fabAdd"/>
+
+    <ImageView android:layout_width="30dp"
+               android:layout_height="30dp"
+               android:src="@drawable/ic_check_new"
+               android:elevation="11dp"
+               android:id="@+id/doneIV"
+               app:layout_constraintTop_toTopOf="@id/doneBtn"
+               app:layout_constraintStart_toStartOf="@id/doneBtn"
+               app:layout_constraintEnd_toEndOf="@id/doneBtn"
+               app:layout_constraintBottom_toBottomOf="@id/doneBtn"
+    />
+
+    <android.support.constraint.ConstraintLayout
+            android:visibility="gone"
+            android:id="@+id/bottomCons"
+            android:background="@color/colorAppBar"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            android:layout_width="match_parent"
+            android:layout_height="120dp"/>
+
+    <Button
+            android:visibility="gone"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            android:layout_marginBottom="40dp"
+            android:layout_marginLeft="40dp"
+            android:layout_marginRight="40dp"
+            android:paddingTop="15dp"
+            android:paddingBottom="15dp"
+            android:text="@string/done"
+            style="@style/DefaultButton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+</android.support.constraint.ConstraintLayout>

@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+    <LinearLayout
+            app:layout_constraintTop_toTopOf="parent"
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/home_row_default"
+            android:layout_marginTop="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginLeft="5dp"
+            android:gravity="center_horizontal"
+            android:layout_weight="1">
+        <ImageView android:layout_width="64dp"
+                   android:layout_height="64dp"
+                   android:layout_marginTop="15dp"
+                   android:id="@+id/icon"/>
+        <TextView
+                android:id="@+id/levelTV"
+                android:layout_marginTop="8dp"
+                android:textColor="@color/colorWhite"
+                android:textSize="18dp"
+                android:fontFamily="@font/futuraptmedium"
+                android:text="Junior"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+        <TextView android:layout_width="wrap_content"
+                  android:layout_height="wrap_content"
+                  android:layout_marginTop="8dp"
+                  android:textColor="@color/colorWhite"
+                  android:textSize="18dp"
+                  android:id="@+id/yearlyMethodTV"
+                  android:fontFamily="@font/futuraptmedium"
+                  android:text="Billed Monthlyly"/>
+        <TextView android:layout_width="wrap_content"
+                  android:layout_height="wrap_content"
+                  android:layout_marginTop="5dp"
+                  android:textSize="14dp"
+                  android:id="@+id/yearlyLabelTV"
+                  android:textColor="@color/colorWhite"
+                  android:fontFamily="@font/futuraptmedium"
+                  android:text="60 Labels"/>
+        <TextView android:layout_width="wrap_content"
+                  android:layout_height="wrap_content"
+                  android:layout_marginTop="10dp"
+                  android:textColor="@color/colorWhite"
+                  android:fontFamily="@font/futuraptmedium"
+                  android:id="@+id/yearlySaveTV"
+                  android:textSize="18dp"
+                  android:text="USD 20.99"/>
+        <TextView android:layout_width="wrap_content"
+                  android:layout_height="wrap_content"
+                  android:layout_marginTop="10dp"
+                  android:lineSpacingExtra="3dp"
+                  android:textColor="@color/colorText1"
+                  android:textAlignment="center"
+                  android:fontFamily="@font/futuraptmedium"
+                  android:text="Get 120 Labels\nTake up to 300 photos" android:id="@+id/tvDes"/>
+        <TextView android:layout_width="wrap_content"
+                  android:layout_height="wrap_content"
+                  android:layout_marginTop="5dp"
+                  android:lineSpacingExtra="3dp"
+                  android:textAlignment="center"
+                  android:textColor="@color/colorText1"
+                  android:fontFamily="@font/futuraptmedium"
+                  android:text="Customisable Floorplans \n Reusable label \n Unlimited Tag\nBilled Yearly"
+                  android:visibility="gone"/>
+        <android.support.constraint.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_marginTop="20dp">
+            <Button
+                    android:id="@+id/buySeniorBtn"
+                    android:layout_width="0dp"
+                    android:layout_height="40dp"
+                    app:layout_constraintWidth_percent="0.6"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintRight_toRightOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    android:layout_marginBottom="20dp"
+                    android:textSize="18dp"
+                    android:text="@string/buy"
+                    style="@style/DefaultButton"/>
+        </android.support.constraint.ConstraintLayout>
+    </LinearLayout>
+
+</android.support.constraint.ConstraintLayout>

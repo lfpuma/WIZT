@@ -1,0 +1,264 @@
+<resources>
+
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.AppCompat.Light.NoActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+
+        <item name="android:textViewStyle">@style/RobotoTextViewStyle</item>
+        <item name="android:buttonStyle">@style/RobotoButtonStyle</item>
+        <item name="android:windowContentTransitions">true</item>
+    </style>
+
+    <style name="AppTheme.NoActionBar">
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+    </style>
+    <style name="AppTheme.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar"/>
+    <style name="AppTheme.PopupOverlay" parent="ThemeOverlay.AppCompat.Light"/>
+
+    <style name="RobotoTextViewStyle" parent="android:Widget.TextView">
+        <item name="android:fontFamily">sans-serif-light</item>
+    </style>
+    <style name="RobotoButtonStyle" parent="android:Widget.Holo.Button">
+        <item name="android:fontFamily">sans-serif-light</item>
+    </style>
+
+    <!--Stripe TextView Color-->
+    <style name="CardWidgetStyle" parent="@android:style/Theme.DeviceDefault">
+        <item name="android:background">@color/colorPageBG</item>
+        <item name="editTextStyle">@style/EditTextOverride</item>
+        <item name="android:editTextStyle">@style/EditTextOverride</item>
+    </style>
+
+    <style name="EditTextOverride" parent="@android:style/Widget.EditText">
+        <item name="android:textColor">#FFFFFF</item>
+        <item name="android:textColorHint">#FFFFFF</item>
+        <item name="android:textSize">12sp</item>
+    </style>
+
+    <!--Auth TextView Title-->
+    <style name="AuthTitle" parent="TextAppearance.AppCompat.Title">
+        <item name="android:fontFamily">@font/futuraptbold</item>
+        <item name="android:textSize">40sp</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:textColor">#ffffff</item>
+    </style>
+
+    <!--Auth EditText-->
+    <style name="AuthEditText" parent="Widget.AppCompat.EditText">
+        <item name="android:fontFamily">@font/futuraptbook</item>
+        <item name="android:textColor">#ffffff</item>
+        <item name="android:textColorHint">#7100C3</item>
+        <item name="android:textSize">20sp</item>
+        <item name="android:paddingTop">10dp</item>
+        <item name="android:paddingBottom">10dp</item>
+        <item name="android:paddingLeft">10dp</item>
+        <item name="android:paddingRight">10dp</item>
+        <item name="android:lines">1</item>
+        <item name="android:background">@drawable/textview_border_sky</item>
+    </style>
+
+    <!--Floor Plan Selectors-->
+    <style name="FloorPlanView" parent="Widget.AppCompat.EditText">
+        <item name="android:background">@drawable/floor_plan_selector</item>
+    </style>
+
+    <!--Bottom Navigation Bar-->
+    <style  name="BottomNavigationView" parent="Widget.Design.BottomNavigationView">
+        <item name="fontFamily">@font/futuraptmedium</item>
+    </style>
+
+    /**
+    * Button Style
+    */
+    <!--Gray Text Button-->
+    <style name="TextButton" parent="TextAppearance.AppCompat">
+        <item name="android:fontFamily">@font/futuraptmedium</item>
+        <item name="android:textColor">#DC873B</item>
+        <item name="android:textSize">15dp</item>
+    </style>
+
+    <!--Sky Text Button-->
+    <style name="SkyTextButton" parent="TextAppearance.AppCompat">
+        <item name="android:fontFamily">@font/futuraptheavy</item>
+        <item name="android:textColor">#ffffff</item>
+        <item name="android:textSize">18dp</item>
+    </style>
+
+    <!--Default Button-->
+    <style name="DefaultButton" parent="Widget.AppCompat.Button">
+        <item name="android:background">@drawable/button_default</item>
+        <item name="android:textColor">@color/colorWhite</item>
+        <item name="android:fontFamily">@font/futuraptdemi</item>
+        <item name="android:textAllCaps">false</item>
+        <item name="android:textSize">24sp</item>
+    </style>
+    <style name="AcceptButton" parent="Widget.AppCompat.Button">
+        <item name="android:background">@drawable/button_accept</item>
+        <item name="android:textColor">@color/colorWhite</item>
+        <item name="android:fontFamily">@font/futuraptdemi</item>
+        <item name="android:textAllCaps">false</item>
+        <item name="android:textSize">16sp</item>
+    </style>
+    <style name="DefaultButton1" parent="Widget.AppCompat.Button">
+        <item name="android:background">@drawable/button_cancel</item>
+        <item name="android:textColor">@color/colorWhite</item>
+        <item name="android:fontFamily">@font/futuraptdemi</item>
+        <item name="android:textAllCaps">false</item>
+        <item name="android:textSize">24sp</item>
+    </style>
+    <style name="DefaultButton2" parent="Widget.AppCompat.Button">
+        <item name="android:background">@drawable/button_default2</item>
+        <item name="android:textColor">@color/colorWhite</item>
+        <item name="android:fontFamily">@font/futuraptdemi</item>
+        <item name="android:textAllCaps">false</item>
+        <item name="android:textSize">24sp</item>
+    </style>
+    <style name="DefaultButton_spectial" parent="Widget.AppCompat.Button">
+        <item name="android:background">@drawable/button_default</item>
+        <item name="android:textColor">@color/colorWhite</item>
+        <item name="android:fontFamily">@font/futuraptdemi</item>
+        <item name="android:textAllCaps">false</item>
+        <item name="android:textSize">18sp</item>
+    </style>
+    <style name="helpButton" parent="Widget.AppCompat.Button">
+        <item name="android:background">@drawable/button_help</item>
+        <item name="android:textColor">@color/colorWhite</item>
+        <item name="android:fontFamily">@font/futuraptdemi</item>
+        <item name="android:textAllCaps">false</item>
+        <item name="android:textSize">24sp</item>
+    </style>
+
+    <!--SideMenu Button-->
+    <style name="SideMenuText">
+        <item name="android:background">@color/colorTransparency</item>
+        <item name="android:textColor">@color/colorWhite</item>
+        <item name="android:fontFamily">@font/roboto_medium</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:textSize">20dp</item>
+        <item name="android:textAllCaps">false</item>
+        <item name="android:layout_marginTop">6dp</item>
+    </style>
+
+    <style name="SideMenuStyle">
+        <item name="android:windowTranslucentStatus">true</item>
+        <item name="android:windowTranslucentNavigation">true</item>
+        <item name="android:fitsSystemWindows">true</item>
+    </style>
+
+    /**
+    * TextView Style
+    */
+    <!--Page Title TextView-->
+    <style name="PageTitle" parent="TextAppearance.AppCompat">
+        <item name="android:fontFamily">@font/futuraptdemi</item>
+        <item name="android:textColor">#ffffff</item>
+        <item name="android:textSize">20dp</item>
+    </style>
+
+    <!--Label Title TextView-->
+    <style name="LabelDetailText" parent="TextAppearance.AppCompat">
+        <item name="android:textColor">#ffffff</item>
+        <item name="android:fontFamily">@font/futuraptheavy</item>
+        <item name="android:textSize">20dp</item>
+    </style>
+
+    <!--Gray TextView-->
+    <style name="GrayTextView" parent="Widget.AppCompat.EditText">
+        <item name="android:fontFamily">@font/futuraptbook</item>
+        <item name="android:textColor">@color/colorText2</item>
+        <item name="android:textSize">18sp</item>
+        <item name="android:background">@color/colorTransparency</item>
+    </style>
+
+    <!--Dark Gray TextView-->
+    <style name="DefaultDarkTextView" parent="TextAppearance.AppCompat">
+        <item name="android:fontFamily">@font/futuraptmedium</item>
+        <item name="android:textColor">#ffffff</item>
+        <item name="android:textSize">20sp</item>
+        <item name="android:background">@color/colorTransparency</item>
+    </style>
+
+    <!--Shipping Address Page TextView-->
+    <style name="AddressPageDarkTextView" parent="TextAppearance.AppCompat">
+        <item name="android:fontFamily">@font/futuraptmedium</item>
+        <item name="android:textColor">@color/colorText1</item>
+        <item name="android:textSize">16sp</item>
+        <item name="android:background">@color/colorTransparency</item>
+    </style>
+
+    <!--BlockEditText-->
+    <style name="BlockEditText" parent="Widget.AppCompat.EditText">
+        <item name="android:fontFamily">@font/futuraptbook</item>
+        <item name="android:textColor">#fff</item>
+    </style>
+
+    <!--Layout Style -->
+    <style name="LayoutStyle">
+        <item name="android:background">@drawable/layout_default</item>
+    </style>
+
+    /**
+    * ImageView Style
+    */
+    <!--Label Detail ImageView-->
+    <style name="LabelDetailImage" xmlns:android="http://schemas.android.com/apk/res/android" android:innerRadiusRatio="5dp">
+    </style>
+
+    <!-- Facebook login button -->
+    <style name="FacebookLoginButton">
+        <item name="android:layout_marginTop">10dp</item>
+        <item name="android:layout_marginBottom">10dp</item>
+        <item name="android:layout_gravity">center_horizontal</item>
+    </style>
+
+    <style name="Item" parent="">
+        <item name="android:textColor">@android:color/white</item>
+    </style>
+
+    <style name="Item.Path">
+        <item name="android:layout_width">@dimen/item_circle_size_path</item>
+        <item name="android:layout_height">@dimen/item_circle_size_path</item>
+    </style>
+
+    <style name="arcLayoutItem_Text">
+        <item name="android:textColor">@android:color/white</item>
+        <item name="android:textSize">12sp</item>
+        <item name="android:gravity">center</item>
+    </style>
+
+    <style name="arcLayoutItem_Image">
+        <item name="android:layout_width">@dimen/item_circle_size_path_inside</item>
+        <item name="android:layout_height">@dimen/item_circle_size_path_inside</item>
+        <item name="android:layout_gravity">center</item>
+        <item name="android:background">@drawable/button_help</item>
+    </style>
+
+    <style name="arcLayoutItem_Image_edit">
+        <item name="android:layout_width">40dp</item>
+        <item name="android:layout_height">40dp</item>
+        <item name="android:layout_gravity">center</item>
+        <item name="android:padding">10dp</item>
+        <item name="android:background">@drawable/button_help</item>
+    </style>
+
+    <style name="datepicker" parent="Theme.AppCompat.Light.Dialog">
+        <item name="colorPrimary">@color/colorText2</item>
+        <item name="colorPrimaryDark">@color/colorText2</item>
+        <item name="colorAccent">@color/colorText2</item>
+    </style>
+
+    <style name="timepicker" parent="Theme.AppCompat.Light.Dialog">
+        <item name="colorPrimary">@color/colorText2</item>
+        <item name="colorPrimaryDark">@color/colorText2</item>
+        <item name="colorAccent">@color/colorText2</item>
+    </style>
+
+    <style name="DialogTheme" parent="android:Theme.Holo.Dialog">
+        <item name="windowMinWidthMajor">0dp</item>
+        <item name="windowMinWidthMinor">0dp</item>
+    </style>
+</resources>

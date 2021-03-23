@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="text_margin">16dp</dimen>
+
+    <!--Profile-->
+    <dimen name="side_menu_icon">36dp</dimen>
+    <dimen name="side_menu_text_margin_left">50dp</dimen>
+    <!-- Floor Draw -->
+    <dimen name="defaultHeight">80dp</dimen>
+    <dimen name="defaultWidth">80dp</dimen>
+    <dimen name="defaultSelectionLine">20dp</dimen>
+    <dimen name="defaultSelectionRectange">40dp</dimen>
+    <dimen name="defaultRectPadding">11dp</dimen>
+    <dimen name="default_lineSpace">17dp</dimen>
+
+    <dimen name="defaultBottomMargin">400dp</dimen>
+    <dimen name="removeBottomMargin">10000dp</dimen>
+    <dimen name="removeLeftMargin">10000dp</dimen>
+
+    <dimen name="minValue">30dp</dimen>
+    <dimen name="card_padding">60dp</dimen>
+    <dimen name="tutorialMargin">6dp</dimen>
+    <dimen name="tutorialCircleSize">10dp</dimen>
+
+    <dimen name="itemHeight">100dp</dimen>
+    <dimen name="result_font">16sp</dimen>
+    <dimen name="adsLayoutHeight">55dp</dimen>
+    <dimen name="adsLayoutMargin_bottom">30dp</dimen>
+    <dimen name="chatbotImageSize">80dp</dimen>
+
+
+    <dimen name="layout_radius_path">100dp</dimen>
+    <dimen name="layout_child_offset_path">100dp</dimen>
+
+    <dimen name="item_circle_size_path">60dp</dimen>
+    <dimen name="item_circle_size_path_inside">40dp</dimen>
+    <dimen name="marginBottom_fabAdd">80dp</dimen>
+    <dimen name="marginEnd_fabAdd">20dp</dimen>
+    <dimen name="marginBottom_arcLayout">0dp</dimen>
+    <dimen name="marginEnd_arcLayout">20dp</dimen>
+
+    <dimen name="fabAddPosY">140dp</dimen>
+    <dimen name="margin_start_nav_header">30dp</dimen>
+    <dimen name="item_height_nav_header">170dp</dimen>
+    <dimen name="marginTop_labelDetailBottomCL">20dp</dimen>
+    <dimen name="marginStart_labelDetailBottomCL">20dp</dimen>
+    <dimen name="marginEnd_labelDetailBottomCL">20dp</dimen>
+    <dimen name="iconSize_labelDetail_alarm">28dp</dimen>
+    <dimen name="iconSize_labelDetail_location">50dp</dimen>
+    <dimen name="bottomCL_friend">50dp</dimen>
+    <dimen name="imagesize_friendbottom">26dp</dimen>
+    <dimen name="closeshareimagesize">20dp</dimen>
+    <dimen name="backbuttoniconsize">24dp</dimen>
+    <dimen name="locationimage_width">167dp</dimen>
+    <dimen name="locationimage_height">124dp</dimen>
+    <dimen name="iconnotessize">24dp</dimen>
+    <dimen name="snapcontentwidth">118dp</dimen>
+    <dimen name="snapcontentheight">88dp</dimen>
+    <dimen name="tagiconsize">48dp</dimen>
+    <dimen name="iconsize_newlabelbottom">20dp</dimen>
+    <dimen name="textsize_newlabelbottom">12sp</dimen>
+    <dimen name="margintop_newlabelbottom">5dp</dimen>
+    <dimen name="bottomclHeight">70dp</dimen>
+    <dimen name="margin_typeNotesLL_locationinfodialog">24dp</dimen>
+    <dimen name="nav_header_icon_size_new">48dp</dimen>
+    <dimen name="request_item_row_height">80dp</dimen>
+    <dimen name="request_item_row_padding">10dp</dimen>
+    <dimen name="registeritemmargin">10dp</dimen>
+
+</resources>

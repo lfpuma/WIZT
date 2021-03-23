@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android">
+    <android.support.constraint.ConstraintLayout
+            xmlns:app="http://schemas.android.com/apk/res-auto"
+            android:layout_width="match_parent"
+            android:layout_height="70dp"
+            android:background="@color/colorAppBar">
+        <ImageButton
+                android:id="@+id/menuBtn"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                app:layout_constraintDimensionRatio="8:10"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                android:background="@color/colorTransparency"
+                android:src="@drawable/ic_menu"/>
+
+        <android.support.v7.widget.CardView
+                android:id="@+id/cardView"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                app:cardCornerRadius="20dp"
+                app:cardElevation="5dp"
+                app:layout_constraintStart_toEndOf="@id/menuBtn"
+                app:layout_constraintEnd_toStartOf="@id/notificationBtn"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:cardUseCompatPadding="true">
+
+            <android.support.v7.widget.SearchView
+                    android:id="@+id/searchBarSearchView"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:iconifiedByDefault="false"
+                    android:padding="1dp"
+                    android:queryHint="Search Here"
+                    android:background="#4c03a0"
+                    app:theme="@style/AppSearchView"
+                    app:searchIcon="@drawable/ic_search"/>
+
+        </android.support.v7.widget.CardView>
+
+        <ImageButton
+                android:id="@+id/notificationBtn"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:padding="18dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintDimensionRatio="8:10"
+                android:background="@color/colorTransparency"
+                android:src="@drawable/ic_bell"/>
+    </android.support.constraint.ConstraintLayout>
+</layout>

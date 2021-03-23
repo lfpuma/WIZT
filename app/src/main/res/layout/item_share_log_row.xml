@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:padding="15dp"
+        android:clipToPadding="false"
+        android:clipChildren="false"
+        android:layout_width="match_parent"
+        android:background="@drawable/home_row_default"
+        android:layout_margin="10dp"
+        android:layout_height="wrap_content">
+
+    <ImageView
+            android:id="@+id/avatarImageView"
+            android:layout_width="0dp"
+            android:layout_height="90dp"
+            app:layout_constraintDimensionRatio="1:1"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            android:src="@drawable/ic_default_avatar" app:layout_constraintBottom_toBottomOf="parent"
+    />
+
+    <android.support.constraint.ConstraintLayout
+            android:id="@+id/cl"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="15dp"
+            android:layout_marginRight="15dp"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toEndOf="@id/avatarImageView"
+            app:layout_constraintEnd_toEndOf="parent">
+
+        <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintStart_toStartOf="parent">
+
+            <LinearLayout
+                    android:orientation="horizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/share_with"
+                        android:textSize="18sp"
+                        android:fontFamily="@font/futuraptmedium"
+                        android:textColor="#ffffff"/>
+                <TextView
+                        android:id="@+id/userNameSharedBy"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="5dp"
+                        android:textSize="18sp"
+                        android:fontFamily="@font/futuraptheavy"
+                        android:textColor="#DC873B"/>
+            </LinearLayout>
+
+            <LinearLayout
+                    android:orientation="horizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/label_name"
+                        android:textSize="16sp"
+                        android:fontFamily="@font/futuraptmedium"
+                        android:textColor="#ffffff"/>
+                <TextView
+                        android:id="@+id/sharedLabelName"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textSize="16sp"
+                        android:layout_marginLeft="3dp"
+                        android:fontFamily="@font/futuraptmedium"
+                        android:textColor="#7100C3"/>
+            </LinearLayout>
+
+            <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                <TextView
+                        android:id="@+id/label1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentLeft="true"
+                        android:text="Access: "
+                        android:textSize="14sp"
+                        android:fontFamily="@font/futuraptmedium"
+                        android:textColor="#ffffff"/>
+                <TextView
+                        android:id="@+id/accessTV"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_toRightOf="@id/label1"
+                        android:textSize="14sp"
+                        android:fontFamily="@font/futuraptmedium"
+                        android:textColor="#7100C3"/>
+                <TextView
+                        android:id="@+id/sharedDate"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="5dp"
+                        android:text="Today"
+                        android:textSize="14sp"
+                        android:layout_alignParentRight="true"
+                        android:fontFamily="@font/futuraptmedium"
+                        android:textColor="#D8D8D8"/>
+            </RelativeLayout>
+
+        </LinearLayout>
+
+    </android.support.constraint.ConstraintLayout>
+
+    <Button
+            android:id="@+id/unShareBtn"
+            style="@style/DefaultButton"
+            app:layout_constraintTop_toBottomOf="@id/cl"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:text="@string/unshare"
+            android:textSize="16sp"
+            android:layout_width="80dp"
+            android:layout_height="40dp" android:layout_marginTop="8dp" android:layout_marginEnd="16dp"/>
+
+
+
+</android.support.constraint.ConstraintLayout>

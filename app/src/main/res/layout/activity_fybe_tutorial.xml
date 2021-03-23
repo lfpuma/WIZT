@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/colorPrimary"
+        tools:context=".activities.FybeTutorialActivity">
+
+
+    <android.support.constraint.Guideline
+            android:orientation="horizontal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintGuide_percent="0.05"
+            android:id="@+id/guideline4"/>
+
+    <android.support.constraint.Guideline
+            android:orientation="horizontal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintGuide_percent="0.8"
+            android:id="@+id/guideline5"/>
+
+    <android.support.v4.view.ViewPager
+            android:id="@+id/viewPager"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            app:layout_constraintBottom_toBottomOf="@id/guideline5"
+            app:layout_constraintTop_toTopOf="@id/guideline4" app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintDimensionRatio=""/>
+
+    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+              app:layout_constraintBottom_toBottomOf="parent"
+              app:layout_constraintStart_toStartOf="parent"
+              app:layout_constraintEnd_toEndOf="parent"
+              android:text="@string/finish"
+              android:textStyle="bold"
+              android:textColor="@color/colorWhite"
+              android:textSize="20sp"
+              android:layout_marginBottom="20dp"
+              android:id="@+id/btnFinish"/>
+
+    <LinearLayout
+            android:id="@+id/circleLinear"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintTop_toBottomOf="@+id/viewPager"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent" android:layout_marginTop="24dp"
+    >
+
+        <View android:layout_width="@dimen/tutorialCircleSize" android:layout_height="@dimen/tutorialCircleSize"
+              android:id="@+id/circle1"
+              android:layout_marginStart="@dimen/tutorialMargin"
+              android:background="@drawable/circlesel_tutorial"/>
+
+        <View android:layout_width="@dimen/tutorialCircleSize" android:layout_height="@dimen/tutorialCircleSize"
+              android:id="@+id/circle2"
+              android:layout_marginStart="@dimen/tutorialMargin"
+              android:background="@drawable/circle_detail"/>
+
+        <View android:layout_width="@dimen/tutorialCircleSize" android:layout_height="@dimen/tutorialCircleSize"
+              android:id="@+id/circle3"
+              android:layout_marginStart="@dimen/tutorialMargin"
+              android:background="@drawable/circle_detail"/>
+
+        <View android:layout_width="@dimen/tutorialCircleSize" android:layout_height="@dimen/tutorialCircleSize"
+              android:id="@+id/circle4"
+              android:layout_marginStart="@dimen/tutorialMargin"
+              android:background="@drawable/circle_detail"/>
+
+    </LinearLayout>
+
+</android.support.constraint.ConstraintLayout>

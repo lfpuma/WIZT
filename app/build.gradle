@@ -1,0 +1,132 @@
+apply plugin: 'com.android.application'
+
+apply plugin: 'kotlin-android'
+
+apply plugin: 'kotlin-android-extensions'
+
+apply plugin: 'io.fabric'
+
+android {
+    compileSdkVersion 28
+    defaultConfig {
+        applicationId "com.wizt"
+        minSdkVersion 23
+        targetSdkVersion 28
+        versionCode 19
+        versionName "2.3"
+        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+        vectorDrawables.useSupportLibrary = true
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+    dataBinding {
+        enabled = true
+    }
+    androidExtensions {
+        experimental = true
+    }
+
+    packagingOptions {
+        exclude 'META-INF/LICENSE'
+        exclude 'META-INF/DEPENDENCIES'
+        exclude 'META-INF/INDEX.LIST'
+    }
+
+}
+
+dependencies {
+    implementation fileTree(dir: 'libs', include: ['*.jar'])
+    implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlin_version"
+    //noinspection GradleCompatible
+    implementation 'com.android.support:appcompat-v7:27.0.0'
+    implementation 'com.android.support:support-v4:27.0.0'
+    //noinspection GradleCompatible
+    //implementation "com.android.support:design:$rootProject.supportLibraryVersion"
+    implementation 'com.android.support:design:27.0.0'
+    implementation 'com.android.support.constraint:constraint-layout:1.1.3'
+    implementation 'android.arch.lifecycle:extensions:1.1.1'
+    implementation 'com.android.support:recyclerview-v7:27.0.0'
+
+    // AWS Mobile SDK for Android
+    implementation 'com.amazonaws:aws-android-sdk-cognitoidentityprovider:2.13.7'
+
+    // AWS S3
+    implementation ('com.amazonaws:aws-android-sdk-mobile-client:2.6.7@aar') { transitive = true }
+    implementation 'com.amazonaws:aws-android-sdk-s3:2.13.7'
+    implementation 'com.amazonaws:aws-android-sdk-cognito:2.13.7'
+    implementation 'com.amazonaws:aws-android-sdk-sns:2.13.7'
+
+    // Facebook
+    implementation 'com.facebook.android:facebook-login:[5,6)'
+    implementation 'com.facebook.android:facebook-android-sdk:[5,6)'
+
+    // Memory Leak Detect
+    debugImplementation 'com.squareup.leakcanary:leakcanary-android:1.6.3'
+    releaseImplementation 'com.squareup.leakcanary:leakcanary-android-no-op:1.6.3'
+    debugImplementation 'com.squareup.leakcanary:leakcanary-support-fragment:1.6.3'
+
+    // Http and Json Parse
+    implementation "com.squareup.okhttp3:okhttp:3.14.1"
+    implementation 'com.google.code.gson:gson:2.8.5'
+
+    // Widget
+    implementation 'de.hdodenhof:circleimageview:3.0.0'
+    implementation 'com.github.bumptech.glide:glide:4.9.0'
+    annotationProcessor 'com.github.bumptech.glide:compiler:4.9.0'
+
+    // Progress Bar
+    implementation 'com.github.ybq:Android-SpinKit:1.2.0'
+
+    // Custom Camera View
+    implementation 'io.fotoapparat:fotoapparat:2.6.1'
+
+    // Tags View
+    implementation 'co.lujun:androidtagview:1.1.4'
+
+    // Country Phone number
+    implementation 'com.github.joielechong:countrycodepicker:2.3.0'
+    implementation project(path: ':blockedittext')
+
+    // Image Slider view
+    implementation 'com.github.smarteist:autoimageslider:1.2.0'
+    implementation 'com.github.bumptech.glide:glide:4.7.1'
+
+    //implementation 'com.infideap.blockedittext:block-edittext:0.1.2'
+    implementation project(path: ':hiddensearchwithrecyclerview')
+    //implementation 'com.nicolettilu:hiddensearchwithrecyclerview:0.0.5'
+
+    // Stripe
+    implementation 'com.stripe:stripe-android:9.0.1'
+
+    // Gif View
+    implementation 'com.github.Cutta:GifView:1.4'
+
+    // DialogFlow SDK depencies
+    implementation 'ai.api:sdk:2.0.7@aar'
+    implementation 'ai.api:libai:1.6.12'
+
+    // Java v2
+    implementation 'com.google.cloud:google-cloud-dialogflow:0.67.0-alpha'
+    implementation 'io.grpc:grpc-okhttp:1.15.1'
+
+    //arclayout
+    implementation 'com.ogaclejapan.arclayout:library:1.1.0@aar'
+    implementation "com.google.android.gms:play-services-auth:15.0.1"
+    //implementation 'com.google.firebase:firebase-core:17.0.0'
+    implementation 'com.google.firebase:firebase-messaging:15.0.2'
+    implementation 'com.google.firebase:firebase-ads:15.0.1'
+    implementation('com.crashlytics.sdk.android:crashlytics:2.10.1@aar') {
+        transitive = true;
+    }
+
+}
+
+apply plugin: 'com.google.gms.google-services'

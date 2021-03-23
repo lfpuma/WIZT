@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:layout_margin="5dp"
+        android:background="@drawable/home_row_default"
+        android:layout_width="match_parent"
+        android:layout_height="80dp">
+
+    <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/avatarIV"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintDimensionRatio="1:1"
+            app:layout_constraintLeft_toLeftOf="parent"
+            android:layout_gravity="center_horizontal"
+            app:civ_border_width="0dp"
+            android:layout_margin="10dp"
+            app:civ_border_color="#ffffff"/>
+
+    <LinearLayout
+            android:id="@+id/ll1"
+            android:orientation="vertical"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintLeft_toRightOf="@id/avatarIV"
+            app:layout_constraintRight_toLeftOf="@id/ll2" android:layout_marginRight="8dp">
+        <TextView
+                android:id="@+id/userName"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text=""
+                android:fontFamily="@font/futuraptmedium"
+                android:textSize="18dp"
+                android:layout_gravity="center"
+                android:layout_marginLeft="10dp"
+                android:textColor="#ffffff"/>
+    </LinearLayout>
+
+    <TextView
+            android:id="@+id/requestSentTextView"
+            app:layout_constraintTop_toBottomOf="@+id/ll1"
+            app:layout_constraintLeft_toLeftOf="@+id/ll1"
+            android:layout_marginLeft="20dp"
+            android:text="Request sent"
+            android:gravity="top"
+            android:textSize="12sp"
+            android:visibility="gone"
+            android:fontFamily="@font/futuraptbook"
+            android:textStyle="bold"
+            android:textColor="@color/colorText2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
+    <android.support.constraint.ConstraintLayout
+            android:id="@+id/ll2"
+            android:orientation="horizontal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="10dp"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintRight_toRightOf="parent">
+        <Button
+                android:id="@+id/addFriendBtn"
+                style="@style/DefaultButton"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                android:text="Add to friendlist"
+                android:textSize="16sp"
+                android:layout_width="130dp"
+                android:layout_height="40dp"/>
+        <Button
+                android:id="@+id/cancelFriendBtn"
+                style="@style/DefaultButton1"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                android:visibility="gone"
+                android:text="Cancel"
+                android:textSize="16sp"
+                android:layout_width="100dp"
+                android:layout_height="40dp"/>
+
+    </android.support.constraint.ConstraintLayout>
+
+</android.support.constraint.ConstraintLayout>

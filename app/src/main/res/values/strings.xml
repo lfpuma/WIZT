@@ -1,0 +1,178 @@
+<resources>
+    <string name="app_name">WIZT</string>
+    <string name="action_settings">Settings</string>
+    <string name="title_activity_splash">SplashActivity</string>
+    <string name="facebook_app_id">2110622868973094</string>
+    <string name="fb_login_protocol_scheme">fb2110622868973094</string>
+
+    <string name="google_client">91882778272-5bon8np7v2mtahp4bf0nncmqrcso77k3.apps.googleusercontent.com</string>
+    <string name="SENDER_ID">AAAADXhtk10:APA91bGhfZO6hYaE0t15stJd8TpPQ0Kn1wE0ZHsZ1cBmv1eU_JMz2ApAfFXW_KyooQClpl1tOBuA-sdlhAFfAhV8UovfZGIZHN7eeiGPLUKrDplo5nw-RZQdH0DtOUEfdoOlLnoc6Ztp</string>
+
+
+    <!--Ads Info-->
+
+    <!--TODO release this-->
+    <!--Real-->
+    <string name="adsBannerID">ca-app-pub-2475703275728115/2391544291</string>
+    <string name="adsPubID">ca-app-pub-2475703275728115~3704625968</string>
+
+    <!--Test-->
+<!--    <string name="adsBannerID">ca-app-pub-3940256099942544/6300978111</string>-->
+<!--    <string name="adsPubID">ca-app-pub-3940256099942544~3347511713</string>-->
+
+    <!---->
+
+    <string name="sign_up">Sign Up</string>
+    <string name="sign_in">Sign in</string>
+    <string name="email">Email</string>
+    <string name="password">Password</string>
+    <string name="confirm_code">Please enter the confirm code</string>
+    <string name="reset_password">Reset Password</string>
+    <string name="new_password">Please enter your new password</string>
+    <string name="forget_password_q">Forget Password\?</string>
+    <string name="already_have_an_account">Already have an account\?</string>
+    <string name="create_new_account">Create an account\?</string>
+    <string name="or">OR</string>
+    <string name="username">Username</string>
+    <string name="phone_number">Phone Number</string>
+    <string name="confirm_password">Confirm Password</string>
+    <string name="forget_password">Forgot Password</string>
+    <string name="enter_your_email_below">Enter your email below to receive your password reset instructions</string>
+    <string name="two_factor_authentication">Two-Factor Authentication</string>
+    <string name="a_verification_code">A Verification Code has been sent to your Email.</string>
+    <string name="this_code_will_be_valid_for_15_minutes">This code will be valid for 15 minutes</string>
+    <string name="verify">Verify</string>
+    <string name="home">Home</string>
+    <string name="fybe">FYBE</string>
+    <string name="search">Search</string>
+    <string name="scan">Scan</string>
+    <string name="new_label">New Label</string>
+    <string name="share">Share</string>
+    <string name="shared">Shared</string>
+    <string name="unshare">UnShare</string>
+    <string name="floorplan">Floor Plan</string>
+    <string name="label_details">Label Details</string>
+    <string name="set_cover_images">Set Cover Images</string>
+    <string name="create_new_label">Create New Label</string>
+    <string name="create_new_floor_plan_label">Create New Floor Plan</string>
+    <string name="shared_with_me">Shared with me</string>
+    <string name="share_with">Share with</string>
+    <string name="content_images">Content Images</string>
+    <string name="enter_locations">Enter Locations</string>
+    <string name="select_location">Type room name</string>
+    <string name="current_location">Current Location</string>
+    <string name="enter_tags">Enter Tags</string>
+    <string name="label_name">Label Name:</string>
+    <string name="ar_marker">AR Marker</string>
+    <string name="images">Images</string>
+    <string name="choosing_options">Choosing Options</string>
+    <string name="nfc">NFC</string>
+    <string name="done">Done</string>
+    <string name="notification">Notification</string>
+    <string name="clear_all">Clear All</string>
+    <string name="buy_label">Buy Label</string>
+    <string name="cancel_plan">Cancel Plan</string>
+    <string name="label_in_use">Label In Use</string>
+    <string name="image_used">Image Used</string>
+    <string name="your_label">Your Label</string>
+    <string name="availableimages">Available Images</string>
+    <string name="your_friends">Your Friends</string>
+    <string name="phone">Phone</string>
+    <string name="logout">Log out</string>
+    <string name="profile">Profile</string>
+    <string name="tap_phone_to_scan_smart_label">Tap Phone to Scan Smart Label</string>
+    <string name="mobile_nfc_support">Mobile NFC Support</string>
+    <string name="supported">Supported</string>
+    <string name="not_supported">Not Supported</string>
+    <string name="all_floor_plans">All Floor Plans</string>
+    <string name="all_floor_plan">All Floor Plan</string>
+    <string name="plan_list">Plan List</string>
+    <string name="choose_option">Choose Option</string>
+    <string name="camera">Camera</string>
+    <string name="share_label">Share Label</string>
+    <string name="access">Access</string>
+    <string name="monthly">Monthly</string>
+    <string name="yearly">Yearly</string>
+    <string name="buy">Buy</string>
+    <string name="name">Name</string>
+    <string name="mobile_no">Email</string>
+    <string name="shipping_address">Shipping Address</string>
+    <string name="country">Country</string>
+    <string name="state">State</string>
+    <string name="zip_code">Zip Code</string>
+    <string name="pay_now">Pay Now</string>
+    <string name="friend_request">Friend Request</string>
+    <string name="tutorial_reply">Tutorials</string>
+    <string name="tap_phone_to_add_wizt_tags">Tap Phone to Add WIZT Tags</string>
+    <string name="add_new">Add New</string>
+    <string name="wizt_tag_added">WIZT Tag added</string>
+    <string name="my_profile">My Profile</string>
+    <string name="friend">Friend</string>
+    <string name="share_log">Share Label</string>
+    <string name="wizt_tags">WIZT Tags</string>
+    <string name="user_list">User List</string>
+    <string name="add_friend">Add Friend</string>
+    <string name="cancel">Cancel</string>
+    <string name="yes">Yes</string>
+    <string name="no">No</string>
+    <string name="ok">OK</string>
+    <string name="skip">SKIP</string>
+    <string name="start">Start</string>
+    <string name="draw">Draw</string>
+    <string name="take_photo">Take Photo</string>
+    <string name="defaultEditView">Room Name</string>
+    <string name="saveTextName">Save</string>
+    <string name="imageDes">image</string>
+    <string name="add_description">Add description</string>
+    <string name="edit_label">Edit Label</string>
+    <string name="edit_trainObject">Edit Object Library</string>
+    <string name="edit_share_label">Edit Share Label</string>
+    <string name="access_true">" View &amp; Edit"</string>
+    <string name="access_false">" View"</string>
+    <string name="set_ar_marker">"Drag and drop AR marker"</string>
+    <string name="set_obj_rect">Drag to Crop Single \nObject to train</string>
+    <string name="ar_marker_image">AR Marker Image</string>
+    <string name="objects_trained">Objects Trained</string>
+    <string name="start_btn">Start</string>
+    <string name="train_fybe">Train FYBE</string>
+    <string name="fype_hint">Type in Object Name &amp; Press Start</string>
+    <string name="view">View</string>
+    <string name="edit">Edit</string>
+    <string name="close">Close</string>
+    <string name="set_permission">Set Permission</string>
+
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="uploadcompleted">Upload Completed!</string>
+    <string name="create_train_object">Create Train Object</string>
+    <string name="current_version_of_fybe_only_supports_1_2_object_recognition">- Current Version of FYBE only supports
+        1-2 object recognition
+    </string>
+    <string name="take_multiple_angles_of_a_single_object">- Take Multiple Angles of a Single Object</string>
+    <string name="errormsg_training">Failure of training</string>
+    <string name="suggestions_by_fybe">Suggestions by FYBE:</string>
+    <string name="add">Add</string>
+    <string name="finish">FINISH</string>
+    <string name="help_text">\?</string>
+    <string name="upgrade_membership_warning_msg">Please upgrade your membership</string>
+    <string name="termsandconditionagreenotice">Please agree to Terms and Condition</string>
+    <string name="termsandconditionurl">https://helios-eos.com/terms-and-conditions/</string>
+    <string name="filepathorimagefileError">Cannot create an image File.</string>
+    <string name="entermsg">Please answer the qustion.</string>
+    <string name="speech_prompt">Say something..</string>
+    <string name="speech_not_supported">Your phone does not support microphone.</string>
+    <string name="understoodnot">I don\'t know what you mean. Please say it again.</string>
+    <string name="friends_list">Friends List</string>
+    <string name="add_friends">Add Friends</string>
+    <string name="please_select_one_to_share">Please select one to share.</string>
+    <string name="received">Received</string>
+    <string name="snap_where_you_placed_it">Snap where you placed it</string>
+    <string name="camera_current_version_of_fybe">Camera
+        (Current Version of FYBE only supports 1-2 object recognition)</string>
+    <string name="snap_content_images">Snap content images</string>
+    <string name="take_multiple_angles">Take Multiple Angles</string>
+    <string name="location_info_set_ar">Location info</string>
+    <string name="imagetransition">imagetrans</string>
+    <string name="locationtransition">locationtransition</string>
+    <string name="subscriptioncancel">Your subscription canceled. Please subscribe again.</string>
+    <string name="add_more_contents">Add More Contents</string>
+</resources>

@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+             xmlns:tools="http://schemas.android.com/tools"
+             xmlns:app="http://schemas.android.com/apk/res-auto"
+             android:layout_width="match_parent"
+             android:layout_height="match_parent"
+             xmlns:custom="http://schemas.android.com/tools"
+             android:background="@color/colorPageBG"
+             tools:context=".fragments.ScanFragment">
+
+    <include
+            android:id="@+id/include"
+            layout="@layout/app_bar"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent"/>
+
+    <!--<com.cunoraz.gifview.library.GifView-->
+            <!--android:id="@+id/animationGif"-->
+            <!--android:layout_width="wrap_content"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--app:layout_constraintTop_toBottomOf="@+id/include"-->
+            <!--app:layout_constraintRight_toRightOf="parent"-->
+            <!--app:layout_constraintLeft_toLeftOf="parent"-->
+            <!--app:layout_constraintBottom_toTopOf="@+id/guidelineEditText"-->
+            <!--android:layout_marginBottom="20dp"-->
+            <!--custom:gif="@mipmap/animation" />-->
+
+    <Button
+            android:id="@+id/helpBtn"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/include"
+            android:layout_marginTop="20dp"
+            android:layout_marginRight="20dp"
+            android:paddingTop="10dp"
+            android:paddingBottom="10dp"
+            style="@style/helpButton"
+            android:text="@string/help_text"/>
+
+    <ImageView
+            android:id="@+id/animationGif"
+            android:layout_width="240sp"
+            android:layout_height="240sp"
+            app:layout_constraintTop_toBottomOf="@+id/include"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintBottom_toTopOf="@+id/etObjName"/>
+
+
+
+    <EditText
+            android:id="@+id/etObjName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="20dp"
+            app:layout_constraintBottom_toTopOf="@id/startBtn"
+            app:layout_constraintLeft_toLeftOf="parent"
+            android:textColorHint="@color/colorText2"
+            android:hint="@string/fype_hint"
+            android:fontFamily="@font/futuraptmedium"
+            android:textSize="22sp"
+            android:inputType="text"
+            android:textColor="@color/colorWhite"
+            android:backgroundTint="@color/colorText2"
+            android:layout_marginStart="20dp"
+            app:layout_constraintRight_toRightOf="parent"
+            android:layout_marginEnd="20dp"
+
+    />
+
+    <Button
+            android:id="@+id/startBtn"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintBottom_toTopOf="@id/trainedBtn"
+            android:layout_marginBottom="15dp"
+            app:layout_constraintLeft_toLeftOf="parent"
+            android:layout_marginLeft="20dp"
+            app:layout_constraintRight_toRightOf="parent"
+            android:layout_marginRight="20dp"
+            android:paddingTop="10dp"
+            android:paddingBottom="10dp"
+            style="@style/DefaultButton2"
+            android:text="@string/start"/>
+
+    <!--<android.support.constraint.Guideline-->
+            <!--android:orientation="horizontal"-->
+            <!--android:layout_width="wrap_content"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:id="@+id/guidelineTrained"-->
+            <!--app:layout_constraintGuide_begin="585dp"/>-->
+    <Button
+            android:id="@+id/trainedBtn"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintLeft_toLeftOf="parent"
+            android:layout_marginLeft="20dp"
+            app:layout_constraintRight_toRightOf="parent"
+            android:layout_marginBottom="40dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            android:layout_marginRight="20dp"
+            android:paddingTop="10dp"
+            android:paddingBottom="10dp"
+            style="@style/DefaultButton"
+            android:text="@string/objects_trained"/>
+
+
+</android.support.constraint.ConstraintLayout>
